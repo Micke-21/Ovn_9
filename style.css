@@ -16,3 +16,14 @@ body{
 .bg-primary {
     background-color: #5998f7 !important;
   }
+
+  .lth{
+    text-decoration: line-through;
+    background-color: coral;
+  }
+
+  footer{
+      height: 50px;
+      background-color: rgb(241, 234, 217);
+      
+  }
