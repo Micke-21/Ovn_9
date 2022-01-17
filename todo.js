@@ -10,31 +10,31 @@ const b1 = document.querySelector('#b1');
 const tb1 = document.querySelector('#tb1');
 const cb1 = document.querySelector('#cb-1');
 
-const ss = document.querySelectorAll('article > div > div > div').forEach(d =>
-    d.addEventListener('click', (e) => {
-        console.log('Klick av: ' + e)
+// const ss = document.querySelectorAll('article > div > div > div').forEach(d =>
+//     d.addEventListener('click', (e) => {
+//         console.log('Klick av: ' + e)
         
-        d.classList.toggle('lth');
-    }));
-    console.log('s: ' + ss);
+//         d.classList.toggle('lth');
+//     }));
+//     console.log('s: ' + ss);
     
-    todoRow.addEventListener('click', (e) => {
-        console.log('Checkbox: ' + cb1.checked);
-        p1.classList.toggle('lth');
+//     todoRow.addEventListener('click', (e) => {
+//         console.log('Checkbox: ' + cb1.checked);
+//         p1.classList.toggle('lth');
         
-        // cb1.classList.toggle('lth');
+//         // cb1.classList.toggle('lth');
         
-        if (cb1.checked)
-        cb1.checked = false;
-        else
-        cb1.checked = true;
+//         if (cb1.checked)
+//         cb1.checked = false;
+//         else
+//         cb1.checked = true;
         
-    });
+//     });
 
 
-tb1.addEventListener('click', (e) => {
-    todoRow.remove();
-});
+// tb1.addEventListener('click', (e) => {
+//     todoRow.remove();
+// });
 
 
 btn.addEventListener('click', (e) => {
@@ -45,6 +45,7 @@ btn.addEventListener('click', (e) => {
     if (newTodo.value != "") {
         let newDiv = CreateDiv("row");
         let inputField = CreateInput();
+        // Funkar inte så vart skall det ligga för att få checkrutan att funka????
         // inputField.addEventListener('click', (e) => {
         //     if (inputField.checked)
         //         inputField.checked = false;
@@ -81,8 +82,11 @@ btn.addEventListener('click', (e) => {
     }
 
     function CreateInput() {
+        //Ska det vara </input> på inputfält? koden nedan skapar och syns i inspektorn
+        //men när jag la till en </input> i html filen så syns den inte i inspektorn?!?!?
         let newInputField = document.createElement("input");
         newInputField.innerHTML = newTodo.value;
+//Det syns inte på ehmsidan med finns i koden när jag kollar med inspektor?!?!?
 
         let att = document.createAttribute("type");
         att.value = "checkbox";
