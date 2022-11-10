@@ -1,8 +1,14 @@
 const todoDiv = document.querySelector('#todos');
 const newTodo = document.querySelector('#todoInput');
 
+// const todoform = document.querySelector('#todoform');
+// todoform.addEventListener('submit', (e) => {
+//     e.preventDefault();
+//     console.log('submit');
+// });
 
-const btn = document.querySelector('#btn');
+const btn = document.querySelector('#todoform');
+//const btn = document.querySelector('#btn');
 const todoRow = document.querySelector('#todos-1');
 
 const p1 = document.querySelector('#p1');
@@ -41,6 +47,8 @@ btn.addEventListener('click', (e) => {
     console.log('Button: ' + btn);
     console.log('todoDiv: ' + todoDiv);
     console.log('newTodo: ' + newTodo.value);
+    
+    e.preventDefault();
 
     if (newTodo.value != "") {
         let newDiv = CreateDiv("row");

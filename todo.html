@@ -66,17 +66,20 @@
 
                 </div>
 
-                <!-- <form> -->
-                <div class="row">
-                    <div class="col-sm-6">
-                        <label for="todoInput" class="form-label">Lägg till att göra</label>
-                        <input type="text" class="form-control" id="todoInput">
+                <form id="todoform">
+                    <div class="row">
+                        <div class="input-group input-group-lg">
+                            <div class="input-group-append col-sm-8">
+                                <label for="todoInput" class="form-label">Lägg till att göra</label>
+                                <input type="text" class="form-control" id="todoInput" autofocus>
+                            </div>
+                            <div class="input-group-append input-group-lg">
+                                <button type="submit" id="btn" class="btn btn-primary  mt-3">Lägg till att göra</button>
+                            </div>
+                        </div>
+
                     </div>
-                </div>
-                <div class="col-sm-4">
-                    <button type="button" id="btn" class="btn btn-primary  mt-3">Lägg till att göra</button>
-                </div>
-                <!-- </form> -->
+                </form>
 
             </article>
 
@@ -84,7 +87,7 @@
         </div>
     </main>
 
-    <footer class="container mt-3">
+    <footer class="container fixed-bottom mt-3">
         &copy; Micke
     </footer>
 
